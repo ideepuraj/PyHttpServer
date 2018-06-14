@@ -20,7 +20,7 @@ class myHandler(BaseHTTPRequestHandler):
 	#capture image
 	def capture_img(self):
 		print 'saving image...'
-		cmd = 'ffmpeg -loglevel quiet -i rtsp://admin:vava@deep143@192.168.2.18/onvif1 -s 1280x960 -vframes 1 -r 1 -y /home/osmc/PyHttpServer/cam.jpg'
+		cmd = 'ffmpeg -loglevel quiet -i rtsp://xxxxxxx/onvif1 -s 1280x960 -vframes 1 -r 1 -y /home/osmc/PyHttpServer/cam.jpg'
 		p=subprocess.Popen(shlex.split(cmd), stdout=PIPE)
 		p.wait()
 
